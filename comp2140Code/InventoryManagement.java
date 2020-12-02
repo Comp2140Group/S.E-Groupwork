@@ -45,7 +45,7 @@ public class InventoryManagement{
      * Removes an item from the inventory
      * @param item object of item class to be removed
      */
-    public void removeItem(Item item){
+    public void removeItem(Item item) throws IOException {
         String newFile = "temp.txt";
         File tempFile = new File(newFile);
         try{
