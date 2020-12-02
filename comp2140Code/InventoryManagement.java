@@ -66,18 +66,19 @@ public class InventoryManagement{
                         pw.println(productID +","+productName+","+
                         productAmount+","+productPrice);
                     }
-                    readF.close();
-                    pw.flush();
-                    pw.close();
-                    add.close();
-                    bw.close();
-                    inventory.delete();
-                    File dump = new File(filepath);
-                    tempFile.renameTo(dump);
+            
     
                     
 
                 }
+            readF.close();
+            pw.flush();
+            pw.close();
+            add.close();
+            bw.close();
+            inventory.delete();
+            File dump = new File(filepath);
+            tempFile.renameTo(dump);
                 
             }
         } catch (Exception e){
