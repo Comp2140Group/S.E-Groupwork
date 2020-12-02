@@ -11,7 +11,6 @@ import java.util.*;
 
 import javax.swing.JOptionPane;
 
-import java.nio.*;
 
 
 public class InventoryManagement{
@@ -22,9 +21,11 @@ public class InventoryManagement{
     
     /**
      * Adds an item to the inventory.
+     * 
      * @param item obect of item class to be added
+     * @throws IOException
      */
-    public void addItem(Item item) {
+    public void addItem(Item item) throws IOException {
         
         FileWriter add = new FileWriter(filepath, true);
         try{
@@ -34,7 +35,7 @@ public class InventoryManagement{
                 add.close();
             }
             
-        } catch(Exception e){
+        } catch(IOException e){
             JOptionPane.showMessageDialog(null, "Error");
             e.printStackTrace();
         }
@@ -65,20 +66,23 @@ public class InventoryManagement{
                         pw.println(productID +","+productName+","+
                         productAmount+","+productPrice);
                     }
-                 
+                    readF.close();
+                    pw.flush();
+                    pw.close();
+                    add.close();
+                    bw.close();
+                    inventory.delete();
+                    File dump = new File(filepath);
+                    tempFile.renameTo(dump);
+    
                     
 
                 }
-                readF.close();
-                pw.flush();
-                pw.close();
-                inventory.delete();
-                File dump = new File(filepath);
-                tempFile.renameTo(dump);
-
+                
             }
         } catch (Exception e){
             JOptionPane.showMessageDialog(null, "Error");
+            e.printStackTrace();
         }
         
 
