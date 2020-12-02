@@ -53,7 +53,7 @@ public class InventoryManagement{
             BufferedWriter bw = new BufferedWriter(add);
             PrintWriter pw = new PrintWriter(bw);
             Scanner readF = new Scanner(inventory);
-            readF.useDelimiter("[,/n");
+            readF.useDelimiter("[,/n]");
             
             if (!inventory.createNewFile()){
                 String id = String.valueOf(item.getId());
