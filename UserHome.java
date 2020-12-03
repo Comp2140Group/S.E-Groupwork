@@ -1,6 +1,8 @@
 import java.awt.*;
 import javax.swing.*;
 
+package comp2140Code;
+
 
 public class UserHome extends JFrame {
 
