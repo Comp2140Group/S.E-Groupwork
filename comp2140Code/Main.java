@@ -14,15 +14,15 @@ public class Main{
 
 		//CASE 2: ADD ITEM INCORRECT
 		item = new Item(1234, "Pencil", 30, "Writing tool", 10);
-		inventory.addItem();
+		inventory.addItem(item);
 
 		//CASE 1: GET NAME
 		item = new Item(1243, "Pencil", 30, "Writing tool", 10.00);
-		item.getName();
+		System.out.println(item.getName());
 
 		//CASE 1: UPDATE AMOUNT
 		item.updateAmount(21);
-		item.toString();
+		System.out.println(item.toString());
 
 		//CASE 1: CHECKOUT BILL HAS ITEM
 		TransMgmt transaction = new TransMgmt();
