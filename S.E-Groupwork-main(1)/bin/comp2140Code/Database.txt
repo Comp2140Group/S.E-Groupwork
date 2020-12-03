@@ -1,0 +1,12 @@
+create database swing_demo;
+
+SELECT * FROM swing_demo;
+CREATE TABLE user
+( id int NOT NULL,
+  name varchar(250) NOT NULL,
+  password varchar(250)
+);
+
+
+INSERT INTO user (id, name, password)
+VALUES (1, 'admin', 'admin');
