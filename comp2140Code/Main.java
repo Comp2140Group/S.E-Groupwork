@@ -1,5 +1,7 @@
 import java.util.*;
 
+package comp2140Code;
+
 public class Main{
 
 	public static void main(String[] args){
