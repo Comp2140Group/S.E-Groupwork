@@ -51,5 +51,8 @@ public void modifyEmployee(EmpMgmt iManagement) {
     iManagement.getEmployeeAttendence(Employee);
 }
 
+public String getPword(){
+    return pword;
+}
 
 }
