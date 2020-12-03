@@ -9,7 +9,7 @@ public class Item{
     private String itemName;
     private int itemAmount;
     private String description;
-    private float price;
+    private double price;
 
     /**
      * Constructer for an item object.
@@ -20,7 +20,7 @@ public class Item{
      * @param price the cost of an item
      */
     public Item(int idNum, String itemName, int itemAmount, 
-    String description, float price){
+    String description, double price){
         this.idNum = idNum;
         this.itemName = itemName;
         this.itemAmount = itemAmount;
@@ -80,7 +80,7 @@ public class Item{
      * Updates the price of an item in the inventory.
      * @param newPrice an update of the new price for an item
      */
-    public void updatePrice(float newPrice){
+    public void updatePrice(double newPrice){
         this.price = newPrice;
     }
 
