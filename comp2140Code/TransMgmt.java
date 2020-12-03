@@ -64,12 +64,14 @@ public class TransMgmt{
 					tw.write(customer.toString()+"\n"+inv.toString()+"\n "+inv.getType());
 					tw.close();
 					System.out.println("Checkout Successful");
+					customer.addInv(inv);
 				}
 				else if (credit.equalsIgnoreCase(type)){
 					inv.setType(credit);
 					tw.write(customer.toString()+"\n"+inv.toString()+"\n"+inv.getType());
 					tw.close();
 					System.out.println("Checkout Successful");
+					customer.addInv(inv);
 				}
 				System.out.println("Error. Check out again.");
 			}
