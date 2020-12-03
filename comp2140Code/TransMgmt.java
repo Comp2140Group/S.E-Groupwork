@@ -8,15 +8,10 @@ import java.io.*;
 
 package comp2140Code;
 
-//	NEEDDS TO IMPORT ITEM CLASS
-//	IMPLEMENT ADMIN PASSWORD FEATURE TO REMOVE ITEMS
-
 public class TransMgmt{
 
 	Invoice inv = new Invoice();
 	Customer customer = new Customer();
-//	GET ADMIN INFO FROM TEXT
-//	Admin admin = new Admin();
 	String filepath = "Transactions.txt";
 	File transactions = new File(filepath);
 
@@ -33,8 +28,7 @@ public class TransMgmt{
 	*@param item object to be removed from invoice
 	*@param pword admin password
 	*/
-	public void removeItem(int itemID, String pword){
-		
+	public void removeItem(int itemID){
 		inv.removeItem(itemID);
 	}
 
