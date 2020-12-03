@@ -42,45 +42,48 @@ public class TransMgmt{
 	*Begins the Checkout process for a transaction
 	*/
 	public void checkOut() throws IOException{
-		try{
-			String cash = "Cash";
-			String credit = "Credit";
-			Scanner check = new Scanner(System.in);
-			FileWriter tw = new FileWriter(filepath, true);
-			String i;
+		if (!inv.isEmpty()){
+			try{
+				String cash = "Cash";
+				String credit = "Credit";
+				Scanner check = new Scanner(System.in);
+				FileWriter tw = new FileWriter(filepath, true);
+				String i;
 
-			System.out.println("\nCustomer First Name: ");
-			i = check.next();
-			customer.setFName(i);
-			System.out.print("\nCustomer Last Name: ");
-			i = check.next();
-			customer.setLName(i);
-			System.out.print("\nCustomer Contact: ");
-			i = check.next();
-			customer.setContact(i);
-			System.out.println();
+				System.out.println("\nCustomer First Name: ");
+				i = check.next();
+				customer.setFName(i);
+				System.out.print("\nCustomer Last Name: ");
+				i = check.next();
+				customer.setLName(i);
+				System.out.print("\nCustomer Contact: ");
+				i = check.next();
+				customer.setContact(i);
+				System.out.println();
 
-			inv.setDate();
-			inv.toString();
-			System.out.print("Cash or Credit: ");
-			String type = check.next();
-			if (cash.equalsIgnoreCase(type)){
-				inv.setType(cash);
-				tw.write(customer.toString()+"\n"+inv.toString()+"\n "+inv.getType());
-				tw.close();
-				System.out.println("Checkout Successful");
+				inv.setDate();
+				inv.toString();
+				System.out.print("Cash or Credit: ");
+				String type = check.next();
+				if (cash.equalsIgnoreCase(type)){
+					inv.setType(cash);
+					tw.write(customer.toString()+"\n"+inv.toString()+"\n "+inv.getType());
+					tw.close();
+					System.out.println("Checkout Successful");
+				}
+				else if (credit.equalsIgnoreCase(type)){
+					inv.setType(credit);
+					tw.write(customer.toString()+"\n"+inv.toString()+"\n"+inv.getType());
+					tw.close();
+					System.out.println("Checkout Successful");
+				}
+				System.out.println("Error. Check out again.");
 			}
-			else if (credit.equalsIgnoreCase(type)){
-				inv.setType(credit);
-				tw.write(customer.toString()+"\n"+inv.toString()+"\n"+inv.getType());
-				tw.close();
-				System.out.println("Checkout Successful");
+			catch (Exception e){
+				System.out.println("Error");
+				e.printStackTrace();
 			}
-			System.out.println("Error. Check out again.");
 		}
-		catch (Exception e){
-			System.out.println("Error");
-			e.printStackTrace();
-		}
+		System.out.println("Error. Check out again.");
 	}
 }
