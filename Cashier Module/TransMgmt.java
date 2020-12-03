@@ -6,6 +6,8 @@
 import java.util.*;
 import java.io.*;
 
+package comp2140Code;
+
 //	NEEDDS TO IMPORT ITEM CLASS
 //	IMPLEMENT ADMIN PASSWORD FEATURE TO REMOVE ITEMS
 
