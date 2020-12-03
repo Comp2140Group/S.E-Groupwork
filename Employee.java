@@ -5,6 +5,8 @@
 
 import package java.time.LocalDateTime;
 
+package comp2140Code;
+
 public class Employee{
     private int empID;
     private String firstName;
