@@ -84,6 +84,6 @@ public class TransMgmt{
 				e.printStackTrace();
 			}
 		}
-		System.out.println("Error. Check out again.");
+		System.out.println("List is empty. Check out again.");
 	}
 }
