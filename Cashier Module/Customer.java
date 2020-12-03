@@ -5,6 +5,8 @@
 
 import java.util.*;
 
+package comp2140Code;
+
 public class Customer{
 	
 	private ArrayList<Invoice> inv = new ArrayList<Invoice>();
