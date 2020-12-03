@@ -49,11 +49,11 @@ public class InventoryManagement{
         String newFile = "temp.txt";
         File tempFile = new File(newFile);
         try{
-            FileWriter add = new FileWriter("Item_Inventory.txt", true);
+            FileWriter add = new FileWriter(filepath, true);
             BufferedWriter bw = new BufferedWriter(add);
             PrintWriter pw = new PrintWriter(bw);
             Scanner readF = new Scanner(inventory);
-            readF.useDelimiter("[,/n]");
+            readF.useDelimiter("[,\n]");
             
             if (!inventory.createNewFile()){
                 String id = String.valueOf(item.getId());
