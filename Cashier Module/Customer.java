@@ -25,12 +25,6 @@ public class Customer{
 		this.lName = lName;
 	}
 
-	/**
-	*Null constructor for a customer object
-	*/
-	public Customer(){
-
-	}
 
 	/**
 	*Retrieves first name of customer
@@ -94,9 +88,7 @@ public class Customer{
 	*@return customer details as String
 	*/
 	public String toString(){
-		System.out.println(fName+" "+lName);
-		System.out.println("Contact: "+contact);
-		return null;
+		return fName+" "+lName+"\n"+"Contact: "+contact;
 	}
 
 	/**
@@ -106,15 +98,13 @@ public class Customer{
 	*/
 	public String toString(String l){
 		if (l.equalsIgnoreCase("All")){
-			System.out.println(fName+" "+lName);
-			System.out.println("Contact: "+contact);
-			System.out.println();
+			return fName+" "+lName+"\n"+"Contact: "+contact+"\n";
 			int i = 0;
 			while (i<inv.size()){
 				inv.get(i).toString();
 				i++;
 			}
 		}
-		return null;
+		
 	}
 }
