@@ -4,6 +4,8 @@
  **/
 import java.util.* ;
 
+package comp2140Code;
+
 public class Admin{
     private int adminID;
     private String fname, lname;
