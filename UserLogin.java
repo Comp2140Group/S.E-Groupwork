@@ -8,6 +8,8 @@ import java.sql.SQLException;
 
 import javax.swing.*;
 
+package comp2140Code;
+
 public class UserLogin extends JFrame {
 
     private static final long serialVersionUID = 1L;
