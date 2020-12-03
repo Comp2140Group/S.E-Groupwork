@@ -5,6 +5,8 @@
 
 import java.util.*;
 
+package comp2140Code;
+
 public class Invoice{
 
 	protected ArrayList<Item> bill = new ArrayList<Item>();
